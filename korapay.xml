@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension method="upgrade" group="vmpayment" type="plugin" version="2.5">
+    <name>VM Payment - Korapay</name>
+    <creationDate>January 2020</creationDate>
+    <author>Olokor Divine</author>
+    <authorUrl>https://github.com/divee789</authorUrl>
+     <copyright>Copyright (C) 2020 Olokor Divine. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.0.0</version>
+
+    <description>
+        <![CDATA[
+                <div style="
+                    display: block;
+                    margin: 20px;
+                    padding: 20px;
+                    text-align: center;
+                ">
+                 <img src="https://korablobstorage.blob.core.windows.net/modal-bucket/kpy-k-standalome.svg" style="height: 100px;
+                display: block;
+                margin: 5px auto 15px;"/>
+            	<p>Accept payments through Direct Charge,Master Card,Visa and Verve</p> 
+                <p><a
+                    style="
+                        color: #f5a623;
+                        font-size: 1.4em;
+                    "
+                    href="https://www.korapay.com/" target="_blank">Click here to get a Live or Test Korapay account</a>.</p> 
+                </div>
+		]]>
+    </description>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.plg_vmpayment_korapay.ini</language>
+    </languages>
+
+    <files>
+        <folder>language</folder>
+        <filename plugin="korapay">korapay.php</filename>
+    </files>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="payment" addfieldpath="/plugins/vmpayment/korapay/korapay/fields">
+                <field name="test_mode"
+                       type="list"
+                       default="0"
+                       label="VMPAYMENT_KORAPAY_TEST_MODE_LBL"
+                       description="VMPAYMENT_KORAPAY_TEST_DESC">
+                    <option value="0">COM_VIRTUEMART_NO</option>
+                    <option value="1">COM_VIRTUEMART_YES</option>
+                </field>
+                <field type="vmtitle"
+                       description=""
+                       default="VMPAYMENT_KORAPAY_KORAPAY_CONF"/>
+                <field type="text"
+                       name="live_secret_key"
+                       description="VMPAYMENT_KORAPAY_LIVE_SECRET_KEY_DESC"
+                       default=""
+                       label="VMPAYMENT_KORAPAY_LIVE_SECRET_KEY_LBL"
+                       size="50"/>
+                <field type="text"
+                       name="live_public_key"
+                       description="VMPAYMENT_KORAPAY_LIVE_PUBLIC_KEY_DESC"
+                       default=""
+                       label="VMPAYMENT_KORAPAY_LIVE_PUBLIC_KEY_LBL"
+                       size="50"/>
+                <field type="text"
+                       name="test_secret_key"
+                       description="VMPAYMENT_KORAPAY_TEST_SECRET_KEY_DESC"
+                       default=""
+                       label="VMPAYMENT_KORAPAY_TEST_SECRET_KEY_LBL"
+                       size="50"/>
+                <field type="text"
+                       name="test_public_key"
+                       description="VMPAYMENT_KORAPAY_TEST_PUBLIC_KEY_DESC"
+                       default=""
+                       label="VMPAYMENT_KORAPAY_TEST_PUBLIC_KEY_LBL"
+                       size="50"/>
+            </fieldset>
+        </fields>
+    </vmconfig>
+
+    <updateservers>
+        <server type="extension" name="VirtueMart plg_vmpayment_korapay Update Site">
+        </server>
+    </updateservers>
+</extension>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name>VM Payment - Korapay</name>
+		<description>
+			<![CDATA[
+				Accept payments through Direct Charge, Debit Cards and USSD. <a href="https://www.korapay.com/" target="_blank">Click here to get a Korapay account</a>.
+			]]>
+		</description>
+		<element>Korapay</element>
+		<type>plugin</type>
+		<version>1.0.0</version>
+		<downloads>
+		<!-- <downloadurl type="upgrade" format="zip">
+			https://github.com/korapayHQ/Korapay-Joomla-VirtueMart-3/archive/1.0.0.zip
+		</downloadurl> -->
+		</downloads>
+		<maintainer>Olokor Divine</maintainer>
+		<maintainerurl>https://github.com/divee789</maintainerurl>
+	</update>
+<updates>
