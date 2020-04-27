@@ -2,8 +2,8 @@
 
 /**
  * @package       VM Payment - Korapay
- * @author        Olokor Divine
- * @copyright     Copyright (C) 2020 Olokor Divine. All rights reserved.
+ * @author        Korapay Developers
+ * @copyright     Copyright (C) 2020 Korapay. All rights reserved.
  * @version       1.0.0,January 2020
  * @license       GNU General Public License version 2 or later; see LICENSE
  */
