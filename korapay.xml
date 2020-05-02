@@ -2,9 +2,9 @@
 <extension method="upgrade" group="vmpayment" type="plugin" version="2.5">
     <name>VM Payment - Korapay</name>
     <creationDate>January 2020</creationDate>
-    <author>Olokor Divine</author>
-    <authorUrl>https://github.com/divee789</authorUrl>
-     <copyright>Copyright (C) 2020 Olokor Divine. All rights reserved.</copyright>
+    <author>Korapay Developers</author>
+    <authorUrl>https://korapay.com</authorUrl>
+     <copyright>Copyright (C) 2020 Korapay. All rights reserved.</copyright>
     <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
     <version>1.0.0</version>
 

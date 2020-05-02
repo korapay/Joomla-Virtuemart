@@ -207,22 +207,22 @@ class plgVmPaymentKorapay extends vmPSPlugin
                   reference:data.reference,
                   amount: Number(data.amount),
                   currency: 'NGN',
-                  channels: ['card', 'bank_transfer'],
-                   narration: 'Paying for order',
-                    customerName:data.customer_firstname + ' ' + data.customer_lastname,
-                    customerEmail: data.customer_email,
-                    onClose: function () {
+                  customer:{
+                      name: data.customer_firstname + ' ' + data.customer_lastname,
+                      email: data.customer_email
+                  },
+                  onClose: function () {
                         
-                    },
-                    onSuccess: function (res) {
-                       window.location.replace(data.redirect_url + '&status=success&reference=' + res.reference + '&amount=' + res.amount);
-                    },
-                    onFailed: function (res) {
-                         if(!res.reference){
-                            return  window.location.replace(data.redirect_url + '&status=down&amount=' + res.amount);
-                        }
-                       window.location.replace(data.redirect_url + '&status=failed&reference=' + res.reference + '&amount=' + res.amount);
-                    }
+                  },
+                  onSuccess: function (res) {
+                     window.location.replace(data.redirect_url + '&status=success&reference=' + res.reference + '&amount=' + res.amount);
+                  },
+                  onFailed: function (res) {
+                     if(!res.reference){
+                        return  window.location.replace(data.redirect_url + '&status=down&amount=' + res.amount);
+                     }
+                     window.location.replace(data.redirect_url + '&status=failed&reference=' + res.reference + '&amount=' + res.amount);
+                  }
                 })
             })
         </script>
